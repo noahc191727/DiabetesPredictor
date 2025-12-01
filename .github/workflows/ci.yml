@@ -13,6 +13,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Add project root to PYTHONPATH
+        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -26,7 +29,7 @@ jobs:
 
       - name: Test container run
         run: docker run --rm diabetes-app echo "Container ran successfully"
-      
+
       - name: Install dev dependencies
         run: pip install pytest flake8
 
