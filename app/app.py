@@ -93,7 +93,7 @@ if st.button("Predict Diabetes Risk", type="primary"):
 
     st.markdown(
         f"""
-    <div style="padding: 20px; border-radius: 
+    <div style="padding: 20px; border-radius:
     10px; background-color: #f5f5f5;">
         <h3 style="color:{color};">{category}</h3>
         <p style="font-size:22px; margin:0;">
