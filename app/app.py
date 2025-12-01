@@ -17,9 +17,9 @@ st.title("🩺 Diabetes Risk Prediction Tool")
 
 st.markdown(
     """
-Welcome!  
-This app predicts the probability of **Type 2 Diabetes** using a machine-learning
-model trained on health indicators.  
+Welcome!
+This app predicts the probability of **Type 2 Diabetes** using a
+machine-learning model trained on health indicators.
 Enter patient values below ⬇️
 """
 )
@@ -93,7 +93,8 @@ if st.button("Predict Diabetes Risk", type="primary"):
 
     st.markdown(
         f"""
-    <div style="padding: 20px; border-radius: 10px; background-color: #f5f5f5;">
+    <div style="padding: 20px; border-radius: 
+    10px; background-color: #f5f5f5;">
         <h3 style="color:{color};">{category}</h3>
         <p style="font-size:22px; margin:0;">
             <strong>Estimated Probability:</strong> {percent}%
@@ -111,10 +112,10 @@ if st.button("Predict Diabetes Risk", type="primary"):
     st.subheader("📘 Model Interpretation & Notes")
     st.write(
         """
-**How to interpret this prediction:**  
-- The probability comes from a calibrated **XGBoost classifier**.  
-- Inputs are processed using the same feature engineering as training.  
-- Features include BMI category, glucose ranges, insulin category, and more.  
+**How to interpret this prediction:**
+- The probability comes from a calibrated **XGBoost classifier**.
+- Inputs are processed using the same feature engineering as training.
+- Features include BMI category, glucose ranges, insulin category, and more.
 """
     )
 
@@ -123,9 +124,9 @@ if st.button("Predict Diabetes Risk", type="primary"):
     st.subheader("🧠 Model Information")
     st.markdown(
         """
-- **Model:** Calibrated XGBoost  
-- **Training:** Full EDA + preprocessing  
-- **Calibration:** Isotonic regression  
+- **Model:** Calibrated XGBoost
+- **Training:** Full EDA + preprocessing
+- **Calibration:** Isotonic regression
 """
     )
 
