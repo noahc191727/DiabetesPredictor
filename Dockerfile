@@ -22,7 +22,7 @@ RUN pip install -r requirements.txt
 
 # Expose the default Streamlit port
 EXPOSE 8501
-
+ENV PYTHONPATH="/app"
 # Run Streamlit inside container
 CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
 
