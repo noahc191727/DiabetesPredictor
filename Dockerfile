@@ -25,3 +25,6 @@ EXPOSE 8501
 
 # Run Streamlit inside container
 CMD ["streamlit", "run", "app/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
+    CMD curl -f http://localhost:8501/_stcore/health || exit 1
